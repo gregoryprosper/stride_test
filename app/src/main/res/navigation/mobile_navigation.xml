@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_pokemon">
+
+    <fragment
+        android:id="@+id/navigation_pokemon"
+        android:name="com.gprosper.stridetest.ui.pokemon.PokemonFragment"
+        android:label="@string/title_pokemon"
+        tools:layout="@layout/fragment_pokemon" >
+        <action
+            android:id="@+id/action_navigation_pokemon_to_pokemonDetailFragment"
+            app:destination="@id/pokemonDetailFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_strides_dev"
+        android:name="com.gprosper.stridetest.ui.strides.StridesFragment"
+        android:label="@string/title_strides_dev"
+        tools:layout="@layout/fragment_strides" />
+    <fragment
+        android:id="@+id/pokemonDetailFragment"
+        android:name="com.gprosper.stridetest.ui.pokemon.PokemonDetailFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_pokemon_detail">
+        <argument
+            android:name="pokemonName"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

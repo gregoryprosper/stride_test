@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">StrideTest</string>
+    <string name="title_pokemon">Pokeman</string>
+    <string name="title_strides_dev">Strides.dev</string>
+    <string name="pokemon_order_number">#%1$d</string>
+    <string name="pokemon_weight">%1$dpds</string>
+    <string name="pokemon_exp">%1$dxp</string>
+    <string name="learned_at_level">Learned at level %1$d</string>
+    <string name="loading">Loading</string>
+    <string name="available_moves">Available Moves</string>
+    <string name="experience">Experience:</string>
+    <string name="weight">Weight:</string>
+    <string name="name">Name:</string>
+    <string name="move_tutor">Move Tutor</string>
+    <string name="back">Back</string>
+    <string name="forward">Forward</string>
+    <string name="refresh">Refresh</string>
+</resources>
