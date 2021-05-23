@@ -4,6 +4,7 @@ import androidx.lifecycle.*
 import com.gprosper.stridetest.data.api.model.pokemon.PokemonDetail
 import com.gprosper.stridetest.data.repo.PokemonRepository
 import com.gprosper.stridetest.util.Resource
+import com.gprosper.stridetest.util.SingleLiveEvent
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.launch
@@ -15,7 +16,7 @@ class PokemonViewModel(private val pokemonRepository: PokemonRepository) : ViewM
     private val _pokemon = MutableLiveData<Resource<List<PokemonDetail>>>()
     val pokemon: LiveData<Resource<List<PokemonDetail>>> = _pokemon
 
-    private val _loadingMorePokemon = MutableLiveData<Boolean>()
+    private val _loadingMorePokemon = SingleLiveEvent<Boolean>()
     val loadingMorePokemon: LiveData<Boolean> = _loadingMorePokemon
 
     private val mutex = Mutex();
